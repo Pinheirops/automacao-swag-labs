@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-08-20T22:39:58.903669" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Pinheiro\Documents\prog\swag_lab_automation\tests">
+<suite id="s1-s1" name="Test Login" source="C:\Users\Pinheiro\Documents\prog\swag_lab_automation\tests\test_login.robot">
+<test id="s1-s1-t1" name="Login com sucesso" line="8">
+<kw name="Open Browsers" owner="browser_util">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-20T22:39:59.129798" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-20T22:39:59.129645" elapsed="1.595032"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-20T22:40:00.724895" elapsed="0.037707"/>
+</kw>
+<status status="PASS" start="2025-08-20T22:39:59.129093" elapsed="1.633722"/>
+</kw>
+<kw name="Valid_login" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-20T22:40:00.764615" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-20T22:40:00.764059" elapsed="0.110164"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-20T22:40:00.874674" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-20T22:40:00.874409" elapsed="0.074194"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-20T22:40:00.949092" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-20T22:40:00.948842" elapsed="0.090570"/>
+</kw>
+<status status="PASS" start="2025-08-20T22:40:00.763522" elapsed="0.276006"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-20T22:40:06.040375" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-20T22:40:01.039805" elapsed="5.000689"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-08-20T22:40:06.099463" level="INFO">Element '//*[@id="header_container"]/div[2]/span' is displayed.</msg>
+<arg>${MENU_TITLE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-20T22:40:06.040758" elapsed="0.058784"/>
+</kw>
+<kw name="Close Browsers" owner="browser_util">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-20T22:40:06.100192" elapsed="2.136157"/>
+</kw>
+<status status="PASS" start="2025-08-20T22:40:06.099918" elapsed="2.136545"/>
+</kw>
+<status status="PASS" start="2025-08-20T22:39:59.128567" elapsed="9.108255"/>
+</test>
+<status status="PASS" start="2025-08-20T22:39:58.928210" elapsed="9.309276"/>
+</suite>
+<status status="PASS" start="2025-08-20T22:39:58.904856" elapsed="9.333324"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Test Login" id="s1-s1" pass="1" fail="0" skip="0">Tests.Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
