@@ -1,3 +1,3 @@
 *** Variables ***
 
-${MENU_TITLE}    //*[@id="header_container"]/div[2]/span
+${MENU_TITLE}    class=app_logo
