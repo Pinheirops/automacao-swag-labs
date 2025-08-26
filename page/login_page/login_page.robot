@@ -1,7 +1,7 @@
 *** Settings ***
+Resource        ../../util/browser_util.robot
 Resource        ../../locators/login_locators/login_locators.robot
 Resource        ../../data/login_data/login_data.robot
-Library    SeleniumLibrary
 
 *** Keywords ***
 Confirm
