@@ -1,7 +1,5 @@
 *** Settings ***
-Resource    ../util/browser_util.robot
-Resource    ../page/login_page/login_page.robot
-Resource    ../locators/menu_locators/menu_locators.robot
+Resource    ../util/resources.robot
 
 *** Test Cases ***
 Login com sucesso

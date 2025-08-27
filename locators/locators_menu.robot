@@ -8,7 +8,7 @@ ${MENU_BUTTON_ABOUT}    id=about_sidebar_link
 ${MENU_BUTTON_LOGOUT}    id=logout_sidebar_link
 ${MENU_BUTTON_RESET}    id=reset_sidebar_link
 
-${CART_BUTTON}    id=shopping_cart_link
+${CART_BUTTON}    id=shopping_cart_container
 ${SORT_BUTTON}    class=product_sort_container
 
 ${ITEM_BACKPACK_BUTTON}    id=add-to-cart-sauce-labs-backpack

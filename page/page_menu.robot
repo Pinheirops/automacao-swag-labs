@@ -1,6 +1,5 @@
 *** Settings ***
-Resource    ../../util/browser_util.robot
-Resource    ../../locators/menu_locators/menu_locators.robot
+Resource    ../util/resources.robot
 
 *** Keywords ***
 
