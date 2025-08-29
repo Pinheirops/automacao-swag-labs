@@ -1,17 +1,23 @@
 *** Settings ***
 Resource    ../util/resources.robot
+Library    String
 
 *** Keywords ***
+Acessar item
+    [Arguments]    ${index}
+    ${locator}=    Replace String    ${ID_ITEM}    {index}    ${index}
+    Click Element    ${locator}  
 
-Open_menu
-    Click Element    ${MENU_BUTTON}
-
-Open_cart
-    Click Element    ${CART_BUTTON}
-
-Open_sort
-    Click Element    ${SORT_BUTTON}
-    
-Add_item
+Adicionar item
     [Arguments]    ${item}
-    Click Element    ${item}
+    ${add-cart}=    Replace String    ${BUTTON_ADICIONAR_ITEM}    {item}    ${item}
+    Click Element    ${add-cart}
+
+Confirmar item
+    [Arguments]    ${index}    ${name-item}
+    ${id-img}=    Replace String    ${IMAGE_ITEM}    {index}    ${index}
+    Element Should Be Visible    ${id-img}
+    ${id-title}=    Replace String    ${NAME_ITEM}    {id}    ${index}
+    Element Text Should Be    ${id-title}    ${name-item}
+     
+    
