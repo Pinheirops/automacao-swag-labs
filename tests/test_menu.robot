@@ -1,15 +1,17 @@
 *** Settings ***
 Resource    ../util/resources.robot
+Test Setup    Preparar ambiente de teste
+Test Teardown   Fechar navegador
 
 *** Test Cases ***
 Adicionar item no carrinho
-    Open Browsers
-    Valid_login
-    Confirm
     Wait Until Element Is Visible    ${MENU_TITLE}
-    Element Should Be Visible    ${ITEM_BACKPACK_TITLE}
-    Element Text Should Be    ${ITEM_BACKPACK_TITLE}    Sauce Labs Backpack
-    Add_item    ${ITEM_BACKPACK_BUTTON}
-    Open_cart
-    Element Should Be Visible    ${ITEM_BACKPACK_TITLE}
-    Sleep    5
+    Confirmar item    1    Sauce Labs Bolt T-Shirt      
+    Adicionar item    sauce-labs-bolt-t-shirt
+    Click Element    ${CART_BUTTON}
+    Sleep    3
+   
+Acessar pagina do item
+    Wait Until Element Is Visible    ${MENU_TITLE}
+    Acessar item    1
+    Sleep    3

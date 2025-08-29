@@ -1,45 +1,36 @@
 *** Settings ***
 Resource    ../util/resources.robot
+Test Setup    Abrir navegador
+Test Teardown   Fechar navegador
 
 *** Test Cases ***
-Login com sucesso
-    Open Browsers
+Acesso valido
     Wait Until Element Is Visible    ${TITLE_LOGIN}
-    Valid_login
-    Confirm
+    Login
     Element Should Be Visible    ${MENU_TITLE}
-    Close Browsers
-
-Login sem username
-    Open Browsers
+Acesso sem username
     Wait Until Element Is Visible    ${TITLE_LOGIN}
-    Blank_username
-    Confirm
+    Input text    ${PASSWORD_FIELD}    ${PASSWORD}
+    Click Element    ${LOGIN_BUTTON}
     Wait Until Element Is Visible    ${ITEM_ERROR}
     Element Should Contain    ${MESSAGE_ERROR}    Username is required
-
-Login sem password
-    Open Browsers
+Acesso sem senha
     Wait Until Element Is Visible    ${TITLE_LOGIN}
-    Blank_password
-    Confirm
+    Input Text    ${EMAIL_FIELD}    ${USERNAME}
+    Click Element    ${LOGIN_BUTTON}
     Wait Until Element Is Visible    ${ITEM_ERROR}
     Element Should Contain    ${MESSAGE_ERROR}    Password is required
-
-Login com username errado
-    Open Browsers
+Acesso username incorreto
     Wait Until Element Is Visible    ${TITLE_LOGIN}
-    Wrong_username
+    Input Text    ${EMAIL_FIELD}    wrong_user01
     Input Password    ${PASSWORD_FIELD}    ${PASSWORD}
-    Confirm
+    Click Element    ${LOGIN_BUTTON}
     Wait Until Element Is Visible    ${ITEM_ERROR}
     Element Should Contain    ${MESSAGE_ERROR}    Username and password do not match any user in this service
-
-Login com password errado
-    Open Browsers
+Acesso senha incorreta
     Wait Until Element Is Visible    ${TITLE_LOGIN}
-    Wrong_password
+    Input Text    ${PASSWORD_FIELD}    Wrong_password01
     Input Text    ${EMAIL_FIELD}    ${USERNAME}
-    Confirm
+    Click Element    ${LOGIN_BUTTON}
     Wait Until Element Is Visible    ${ITEM_ERROR}
-    Element Should Contain    ${MESSAGE_ERROR}    Username and password do not match any user in this service
+    Element Should Contain    ${MESSAGE_ERROR}    Username and password do not match any user in this service 
