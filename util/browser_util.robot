@@ -1,11 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    resources.robot
 *** Keywords ***
-
-Open Browsers
+Preparar ambiente de teste
     Open Browser    https://www.saucedemo.com/    chrome
     Maximize Browser Window
-
-Close Browsers
+    Input Text    ${EMAIL_FIELD}    ${USERNAME}
+    Input Text    ${PASSWORD_FIELD}    ${PASSWORD}
+    Click Button    ${LOGIN_BUTTON}
+Abrir navegador
+    Open Browser    https://www.saucedemo.com/    chrome
+    Maximize Browser Window
+Fechar navegador
     Close Browser
-    
