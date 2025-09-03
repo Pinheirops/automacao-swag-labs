@@ -1,5 +1,6 @@
 *** Variables ***
 ${MENU_TITLE}    class=app_logo
+${TITLE}    class=title
 
 ${MENU_BUTTON}    id=react-burger-menu-btn
 ${ITEM_HOME}    id=inventory_sidebar_link
