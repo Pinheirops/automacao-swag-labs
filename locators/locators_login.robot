@@ -1,8 +1,8 @@
-*** Variables ***
+*** Variables ***    #    identificação dos elementos importantes na página de login
 
-${EMAIL_FIELD}    id=user-name
-${PASSWORD_FIELD}    id=password
-${LOGIN_BUTTON}    id=login-button
-${ITEM_ERROR}    class=error
-${MESSAGE_ERROR}    //*[@id="login_button_container"]/div/form/div[3]/h3
-${TITLE_LOGIN}    class=login_logo
+${campo-usuario}    id=user-name
+${campo-senha}    id=password
+${botao-login}    id=login-button
+${item-error}    class=error
+${mensagem-erro}    //*[@id="login_button_container"]/div/form/div[3]/h3
+${titulo-login}    class=login_logo

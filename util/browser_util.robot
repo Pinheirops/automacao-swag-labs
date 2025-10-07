@@ -1,13 +1,15 @@
-*** Settings ***
+*** Settings ***    #    importacao de bibliotecas
 Library    SeleniumLibrary
+Library    Collections
 Resource    resources.robot
-*** Keywords ***
+
+*** Keywords ***    #    Test Setup e Test Teardown
 Preparar ambiente de teste
     Open Browser    https://www.saucedemo.com/    chrome
     Maximize Browser Window
-    Input Text    ${EMAIL_FIELD}    ${USERNAME}
-    Input Text    ${PASSWORD_FIELD}    ${PASSWORD}
-    Click Button    ${LOGIN_BUTTON}
+    Input Text    ${campo-usuario}    ${USERNAME}
+    Input Text    ${campo-senha}    ${PASSWORD}
+    Click Button    ${botao-login}
 Abrir navegador
     Open Browser    https://www.saucedemo.com/    chrome
     Maximize Browser Window
