@@ -1,9 +1,11 @@
 *** Variables ***
 ${item-id}    id=item_{id}_title_link
 ${titulo-item}    //*[@id="item_{index}_title_link"]/div
+${botao-adicionar-carrinho}    id=add-to-cart-{nome-produto}
+${botao-remover-carrinho}    id=remove-{nome-produto}
 
-# ${MENU_TITLE}    class=app_logo
-# ${TITLE}    class=title
+
+${titulo-inventario}    class=title
 
 # ${MENU_BUTTON}    id=react-burger-menu-btn
 # ${ITEM_HOME}    id=inventory_sidebar_link
@@ -13,5 +15,3 @@ ${titulo-item}    //*[@id="item_{index}_title_link"]/div
 
 # ${CART_BUTTON}    id=shopping_cart_container
 # ${SORT_BUTTON}    class=product_sort_container
-
-# ${BUTTON_ADICIONAR_ITEM}    id=add-to-cart-{item}

@@ -10,6 +10,7 @@ Login com credencial valida
     Wait Until Location Contains    https://www.saucedemo.com/inventory.html    timeout=10s
     ${url_inicio}=    Get Location
     Should Be Equal    ${url_inicio}    https://www.saucedemo.com/inventory.html
+
 Login com senha incorreta
     Wait Until Element Is Visible    ${titulo-login}
     Input Text    ${campo-usuario}    ${USERNAME}
@@ -17,12 +18,14 @@ Login com senha incorreta
     Click Element    ${botao-login}
     Wait Until Element Is Visible    ${item-error}
     Element Should Contain    ${mensagem-erro}    Epic sadface: Username and password do not match any user in this service
+
 Login com campo vazio
     Wait Until Element Is Visible    ${titulo-login}
     Input Text    ${campo-senha}    ${USERNAME}
     Click Element    ${botao-login}
     Wait Until Element Is Visible    ${item-error}
     Element Should Contain    ${mensagem-erro}    Epic sadface: Username is required
+
 Login bloqueado
     Wait Until Element Is Visible    ${titulo-login}
     Input Text    ${campo-usuario}    locked_out_user
