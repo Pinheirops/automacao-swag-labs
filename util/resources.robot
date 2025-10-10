@@ -12,4 +12,5 @@ Resource     ../locators/locators_login.robot
 Resource     ../data/data_login.robot
 Resource    ../page/page_login.robot
 
-
+#    carrinho
+Resource    ../locators/locators_cart.robot

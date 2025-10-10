@@ -1,98 +1,378 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-10-08T00:35:39.511920" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-10-10T00:43:12.298433" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Menu" source="c:\Users\Pinheiro\Documents\prog\swag_lab_automation\tests\test_menu.robot">
-<test id="s1-t1" name="Remover produto do carrinho" line="17">
+<test id="s1-t1" name="Adicionar produto ao carrinho" line="14">
 <kw name="Preparar ambiente de teste" owner="browser_util" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-08T00:35:39.806830" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-10-10T00:43:12.589635" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>https://www.saucedemo.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-08T00:35:39.806589" elapsed="1.644050"/>
+<status status="PASS" start="2025-10-10T00:43:12.589253" elapsed="1.657368"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.450992" elapsed="0.041236"/>
+<status status="PASS" start="2025-10-10T00:43:14.247037" elapsed="0.025665"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-08T00:35:41.493603" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-10-10T00:43:14.273603" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>${campo-usuario}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.492769" elapsed="0.119136"/>
+<status status="PASS" start="2025-10-10T00:43:14.273049" elapsed="0.129940"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-08T00:35:41.612441" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-10-10T00:43:14.403781" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>${campo-senha}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.612161" elapsed="0.060944"/>
+<status status="PASS" start="2025-10-10T00:43:14.403376" elapsed="0.069321"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-10-08T00:35:41.673628" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-10-10T00:43:14.473306" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>${botao-login}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.673363" elapsed="0.082940"/>
+<status status="PASS" start="2025-10-10T00:43:14.473024" elapsed="0.098239"/>
 </kw>
-<status status="PASS" start="2025-10-08T00:35:39.805831" elapsed="1.950665"/>
+<status status="PASS" start="2025-10-10T00:43:12.588202" elapsed="1.983297"/>
 </kw>
-<kw name="Remover produto" owner="page_menu">
+<kw name="Adicionar produto" owner="page_menu">
 <kw name="Replace String" owner="String">
-<msg time="2025-10-08T00:35:41.758035" level="INFO">${botao-produto} = id=add-to-cart-sauce-labs-bike-light</msg>
+<msg time="2025-10-10T00:43:14.573622" level="INFO">${botao-produto} = id=add-to-cart-sauce-labs-onesie</msg>
 <var>${botao-produto}</var>
 <arg>${botao-adicionar-carrinho}</arg>
 <arg>{nome-produto}</arg>
 <arg>${produto}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.757662" elapsed="0.001156"/>
+<status status="PASS" start="2025-10-10T00:43:14.573322" elapsed="0.000895"/>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-10-08T00:35:41.786885" level="INFO">${botao-texto} = Add to cart</msg>
-<var>${botao-texto}</var>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:14.574829" level="INFO">Verifying element 'id=add-to-cart-sauce-labs-onesie' contains exact text 'Add to cart'.</msg>
 <arg>${botao-produto}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.759174" elapsed="0.027981"/>
+<arg>Add to cart</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.574466" elapsed="0.020982"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-10-08T00:35:41.787882" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
+<msg time="2025-10-10T00:43:14.595954" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-onesie'.</msg>
 <arg>${botao-produto}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.787472" elapsed="0.077279"/>
+<status status="PASS" start="2025-10-10T00:43:14.595704" elapsed="0.060147"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-10-08T00:35:41.865528" level="INFO">${botao-produto} = id=remove-sauce-labs-bike-light</msg>
+<msg time="2025-10-10T00:43:14.656472" level="INFO">${botao-produto} = id=remove-sauce-labs-onesie</msg>
 <var>${botao-produto}</var>
 <arg>${botao-remover-carrinho}</arg>
 <arg>{nome-produto}</arg>
 <arg>${produto}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.865122" elapsed="0.000560"/>
+<status status="PASS" start="2025-10-10T00:43:14.656131" elapsed="0.000449"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-10-08T00:35:41.866203" level="INFO">Clicking button 'id=remove-sauce-labs-bike-light'.</msg>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:14.656959" level="INFO">Verifying element 'id=remove-sauce-labs-onesie' contains exact text 'Remove'.</msg>
 <arg>${botao-produto}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.865905" elapsed="0.064804"/>
+<arg>Remove</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.656738" elapsed="0.015566"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${botao-texto}</arg>
-<arg>Add to cart</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.931171" elapsed="0.000346"/>
+<arg>${ID_PRODUTO_NOME[4]}</arg>
+<status status="PASS" start="2025-10-10T00:43:14.572216" elapsed="0.100359"/>
 </kw>
-<arg>sauce-labs-bike-light</arg>
-<status status="PASS" start="2025-10-08T00:35:41.757144" elapsed="0.174505"/>
+<kw name="Contar produtos no carrinho" owner="page_menu">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-10T00:43:14.673934" level="INFO">${contador} = 0</msg>
+<var>${contador}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.673689" elapsed="0.000381"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-10T00:43:14.675001" level="INFO">${botao-status} = id=remove-sauce-labs-backpack</msg>
+<var>${botao-status}</var>
+<arg>${botao-remover-carrinho}</arg>
+<arg>{nome-produto}</arg>
+<arg>${produto-index}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.674721" elapsed="0.000427"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:14.808555" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-10T00:43:14.808967" level="FAIL">Element with locator 'id=remove-sauce-labs-backpack' not found.</msg>
+<arg>${botao-status}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-10-10T00:43:14.675639" elapsed="0.137254">Element with locator 'id=remove-sauce-labs-backpack' not found.</status>
+</kw>
+<msg time="2025-10-10T00:43:14.813231" level="INFO">${botao} = False</msg>
+<var>${botao}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${botao-status}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.675341" elapsed="0.138010"/>
+</kw>
+<if>
+<branch type="IF" condition="${botao}">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-10T00:43:14.813885" elapsed="0.000130"/>
+</kw>
+<status status="NOT RUN" start="2025-10-10T00:43:14.813568" elapsed="0.000602"/>
+</branch>
+<status status="PASS" start="2025-10-10T00:43:14.813518" elapsed="0.000767"/>
+</if>
+<var name="${produto-index}">sauce-labs-backpack</var>
+<status status="PASS" start="2025-10-10T00:43:14.674508" elapsed="0.139825"/>
+</iter>
+<iter>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-10T00:43:14.815097" level="INFO">${botao-status} = id=remove-sauce-labs-bike-light</msg>
+<var>${botao-status}</var>
+<arg>${botao-remover-carrinho}</arg>
+<arg>{nome-produto}</arg>
+<arg>${produto-index}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.814811" elapsed="0.000391"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:14.940994" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-10T00:43:14.941328" level="FAIL">Element with locator 'id=remove-sauce-labs-bike-light' not found.</msg>
+<arg>${botao-status}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-10-10T00:43:14.815658" elapsed="0.127486">Element with locator 'id=remove-sauce-labs-bike-light' not found.</status>
+</kw>
+<msg time="2025-10-10T00:43:14.943398" level="INFO">${botao} = False</msg>
+<var>${botao}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${botao-status}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.815394" elapsed="0.128329"/>
+</kw>
+<if>
+<branch type="IF" condition="${botao}">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-10T00:43:14.944237" elapsed="0.000098"/>
+</kw>
+<status status="NOT RUN" start="2025-10-10T00:43:14.943965" elapsed="0.000486"/>
+</branch>
+<status status="PASS" start="2025-10-10T00:43:14.943929" elapsed="0.000618"/>
+</if>
+<var name="${produto-index}">sauce-labs-bike-light</var>
+<status status="PASS" start="2025-10-10T00:43:14.814597" elapsed="0.129982"/>
+</iter>
+<iter>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-10T00:43:14.945264" level="INFO">${botao-status} = id=remove-sauce-labs-bolt-t-shirt</msg>
+<var>${botao-status}</var>
+<arg>${botao-remover-carrinho}</arg>
+<arg>{nome-produto}</arg>
+<arg>${produto-index}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.944970" elapsed="0.000415"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:15.063238" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-10T00:43:15.063535" level="FAIL">Element with locator 'id=remove-sauce-labs-bolt-t-shirt' not found.</msg>
+<arg>${botao-status}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-10-10T00:43:14.946090" elapsed="0.119121">Element with locator 'id=remove-sauce-labs-bolt-t-shirt' not found.</status>
+</kw>
+<msg time="2025-10-10T00:43:15.065468" level="INFO">${botao} = False</msg>
+<var>${botao}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${botao-status}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-10T00:43:14.945768" elapsed="0.119790"/>
+</kw>
+<if>
+<branch type="IF" condition="${botao}">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-10T00:43:15.065961" elapsed="0.000096"/>
+</kw>
+<status status="NOT RUN" start="2025-10-10T00:43:15.065720" elapsed="0.000439"/>
+</branch>
+<status status="PASS" start="2025-10-10T00:43:15.065689" elapsed="0.000567"/>
+</if>
+<var name="${produto-index}">sauce-labs-bolt-t-shirt</var>
+<status status="PASS" start="2025-10-10T00:43:14.944796" elapsed="0.121486"/>
+</iter>
+<iter>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-10T00:43:15.066984" level="INFO">${botao-status} = id=remove-sauce-labs-fleece-jacket</msg>
+<var>${botao-status}</var>
+<arg>${botao-remover-carrinho}</arg>
+<arg>{nome-produto}</arg>
+<arg>${produto-index}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.066657" elapsed="0.000426"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:15.206910" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-10T00:43:15.207213" level="FAIL">Element with locator 'id=remove-sauce-labs-fleece-jacket' not found.</msg>
+<arg>${botao-status}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-10-10T00:43:15.067789" elapsed="0.140981">Element with locator 'id=remove-sauce-labs-fleece-jacket' not found.</status>
+</kw>
+<msg time="2025-10-10T00:43:15.209065" level="INFO">${botao} = False</msg>
+<var>${botao}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${botao-status}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.067236" elapsed="0.141930"/>
+</kw>
+<if>
+<branch type="IF" condition="${botao}">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-10T00:43:15.209682" elapsed="0.000118"/>
+</kw>
+<status status="NOT RUN" start="2025-10-10T00:43:15.209337" elapsed="0.000572"/>
+</branch>
+<status status="PASS" start="2025-10-10T00:43:15.209298" elapsed="0.000708"/>
+</if>
+<var name="${produto-index}">sauce-labs-fleece-jacket</var>
+<status status="PASS" start="2025-10-10T00:43:15.066484" elapsed="0.143556"/>
+</iter>
+<iter>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-10T00:43:15.210662" level="INFO">${botao-status} = id=remove-sauce-labs-onesie</msg>
+<var>${botao-status}</var>
+<arg>${botao-remover-carrinho}</arg>
+<arg>{nome-produto}</arg>
+<arg>${produto-index}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.210405" elapsed="0.000375"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:15.283752" level="INFO">Element 'id=remove-sauce-labs-onesie' is displayed.</msg>
+<arg>${botao-status}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.211283" elapsed="0.072651"/>
+</kw>
+<msg time="2025-10-10T00:43:15.284085" level="INFO">${botao} = True</msg>
+<var>${botao}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${botao-status}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.211004" elapsed="0.073146"/>
+</kw>
+<if>
+<branch type="IF" condition="${botao}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-10T00:43:15.284742" level="INFO">${contador} = 1</msg>
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.284485" elapsed="0.000353"/>
+</kw>
+<status status="PASS" start="2025-10-10T00:43:15.284277" elapsed="0.000645"/>
+</branch>
+<status status="PASS" start="2025-10-10T00:43:15.284252" elapsed="0.000744"/>
+</if>
+<var name="${produto-index}">sauce-labs-onesie</var>
+<status status="PASS" start="2025-10-10T00:43:15.210263" elapsed="0.074758"/>
+</iter>
+<iter>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-10T00:43:15.285581" level="INFO">${botao-status} = id=remove-test.allthethings()-t-shirt-(red)</msg>
+<var>${botao-status}</var>
+<arg>${botao-remover-carrinho}</arg>
+<arg>{nome-produto}</arg>
+<arg>${produto-index}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.285351" elapsed="0.000319"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:15.425806" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-10T00:43:15.426110" level="FAIL">Element with locator 'id=remove-test.allthethings()-t-shirt-(red)' not found.</msg>
+<arg>${botao-status}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-10-10T00:43:15.286095" elapsed="0.141567">Element with locator 'id=remove-test.allthethings()-t-shirt-(red)' not found.</status>
+</kw>
+<msg time="2025-10-10T00:43:15.428056" level="INFO">${botao} = False</msg>
+<var>${botao}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${botao-status}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.285831" elapsed="0.142305"/>
+</kw>
+<if>
+<branch type="IF" condition="${botao}">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${contador}</var>
+<arg>${contador} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-10-10T00:43:15.428519" elapsed="0.000081"/>
+</kw>
+<status status="NOT RUN" start="2025-10-10T00:43:15.428277" elapsed="0.000407"/>
+</branch>
+<status status="PASS" start="2025-10-10T00:43:15.428250" elapsed="0.000506"/>
+</if>
+<var name="${produto-index}">test.allthethings()-t-shirt-(red)</var>
+<status status="PASS" start="2025-10-10T00:43:15.285200" elapsed="0.143581"/>
+</iter>
+<var>${produto-index}</var>
+<value>@{ID_PRODUTO_NOME}</value>
+<status status="PASS" start="2025-10-10T00:43:14.674208" elapsed="0.754657"/>
+</for>
+<if>
+<branch type="IF" condition="${contador} &gt;= 1">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-10T00:43:15.443482" level="INFO">${qntd-carrinho} = 1</msg>
+<var>${qntd-carrinho}</var>
+<arg>${contador-carrinho}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.429203" elapsed="0.014439"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-10-10T00:43:15.444061" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${contador}</arg>
+<arg>${qntd-carrinho}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-10-10T00:43:15.443837" elapsed="0.000340"/>
+</kw>
+<status status="PASS" start="2025-10-10T00:43:15.428990" elapsed="0.015267"/>
+</branch>
+<branch type="ELSE">
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<arg>${contador-carrinho}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="NOT RUN" start="2025-10-10T00:43:15.444470" elapsed="0.000073"/>
+</kw>
+<status status="NOT RUN" start="2025-10-10T00:43:15.444333" elapsed="0.000283"/>
+</branch>
+<status status="PASS" start="2025-10-10T00:43:15.428973" elapsed="0.015706"/>
+</if>
+<status status="PASS" start="2025-10-10T00:43:14.673272" elapsed="0.771457"/>
 </kw>
 <kw name="Fechar navegador" owner="browser_util" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-08T00:35:41.932647" elapsed="2.156748"/>
+<status status="PASS" start="2025-10-10T00:43:15.445481" elapsed="2.131564"/>
 </kw>
-<status status="PASS" start="2025-10-08T00:35:41.932248" elapsed="2.157335"/>
+<status status="PASS" start="2025-10-10T00:43:15.445217" elapsed="2.132060"/>
 </kw>
-<status status="PASS" start="2025-10-08T00:35:39.805117" elapsed="4.284776"/>
+<status status="PASS" start="2025-10-10T00:43:12.587285" elapsed="4.990357"/>
 </test>
-<status status="PASS" start="2025-10-08T00:35:39.521181" elapsed="4.569547"/>
+<status status="PASS" start="2025-10-10T00:43:12.302559" elapsed="5.276069"/>
 </suite>
 <statistics>
 <total>
