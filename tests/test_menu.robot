@@ -23,7 +23,7 @@ Remover produto do carrinho
 Ver produtos no carrinho
     Adicionar produto    ${ID_PRODUTO_NOME[1]}
     Abrir carrinho
-    # Validar se os itens selecionados na home estão no carrinho corretamente
+    Validar item adicionado    0
 
 *** Comments ***
     # Adicionar validação por nome do produto também

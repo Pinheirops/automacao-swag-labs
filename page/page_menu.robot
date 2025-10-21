@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../util/resources.robot
 Library    String
+Library    XML
 
 *** Keywords ***
 Checar visibilidade do produto
@@ -43,3 +44,13 @@ Contar produtos no carrinho
     ELSE
         Element Should Not Be Visible    ${contador-carrinho}
     END
+
+Validar item adicionado
+    [Arguments]    ${id}
+    Element Should Be Visible    ${lista-carrinho}
+    ${produto}=    Replace String    ${item-id}    {id}    ${id}
+    Element Should Be Visible    ${produto}
+    # Adicionar um fluxo onde:
+    # Ele pega quantos produtos existem que estão adicionados.
+    # Ele valida se o contado QTY é igual
+    # Ele valida se os itens adicionados estão corretos.
