@@ -50,7 +50,3 @@ Validar item adicionado
     Element Should Be Visible    ${lista-carrinho}
     ${produto}=    Replace String    ${item-id}    {id}    ${id}
     Element Should Be Visible    ${produto}
-    # Adicionar um fluxo onde:
-    # Ele pega quantos produtos existem que estão adicionados.
-    # Ele valida se o contado QTY é igual
-    # Ele valida se os itens adicionados estão corretos.

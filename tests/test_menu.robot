@@ -21,11 +21,6 @@ Remover produto do carrinho
     Contar produtos no carrinho
 
 Ver produtos no carrinho
-    Adicionar produto    ${ID_PRODUTO_NOME[1]}
+    Adicionar produto    ${ID_PRODUTO_NOME[2]}
     Abrir carrinho
-    Validar item adicionado    0
-
-*** Comments ***
-    # Adicionar validação por nome do produto também
-    # A ideia é que que o contador, conforme for sendo incrementado, vá pegando o nome do item e salvando dentro de uma variavel.
-    # Quando pegar o nome do item, deve verificar se o nome que está na variavel, é igual ao texto que está no id do item.
+    Validar item adicionado    1
