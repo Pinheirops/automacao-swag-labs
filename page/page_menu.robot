@@ -26,7 +26,10 @@ Remover produto
     Should Be Equal    ${botao-texto}    Add to cart
 
 Abrir carrinho
+    Wait Until Element Is Visible    ${botao-carrinho}
     Click Element    ${botao-carrinho}
+    ${url}=    Get Location
+    ${url}    Should Be Equal   ${url}    https://www.saucedemo.com/cart.html
 
 Contar produtos no carrinho
     ${contador}=    Set Variable    0
