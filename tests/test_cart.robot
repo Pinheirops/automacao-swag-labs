@@ -10,3 +10,7 @@ Validar botão de continuar comprando
 Validar remoção de item do carrinho
     Adicionar produto    ${ID_PRODUTO_NOME[0]}
     Remover item do carrinho    0
+
+Validar botão de checkout
+    Abrir carrinho
+    Fechar pedido

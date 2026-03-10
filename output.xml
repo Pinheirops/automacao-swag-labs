@@ -1,142 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2026-03-04T23:33:28.369602" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Cart" source="c:\Users\Pinheiro\Documents\prog\swag_lab_automation\tests\test_cart.robot">
-<test id="s1-t1" name="Validar remoção de item do carrinho" line="10">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2026-03-09T22:24:58.915994" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Checkout" source="c:\Users\Pinheiro\Documents\prog\swag_lab_automation\tests\test_checkout.robot">
+<test id="s1-t1" name="Finalizar checkout" line="13">
 <kw name="Preparar ambiente de teste" owner="browser_util" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:28.671372" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-03-09T22:24:59.190850" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>https://www.saucedemo.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-03-04T23:33:28.671021" elapsed="2.704297"/>
+<status status="PASS" start="2026-03-09T22:24:59.190596" elapsed="2.719179"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.375720" elapsed="0.031881"/>
+<status status="PASS" start="2026-03-09T22:25:01.910092" elapsed="0.019824"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.408429" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2026-03-09T22:25:01.930681" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>${campo-usuario}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.407925" elapsed="0.106082"/>
+<status status="PASS" start="2026-03-09T22:25:01.930212" elapsed="0.097683"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.514783" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2026-03-09T22:25:02.028829" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>${campo-senha}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.514363" elapsed="0.059090"/>
+<status status="PASS" start="2026-03-09T22:25:02.028436" elapsed="0.054000"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.573984" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-03-09T22:25:02.082963" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>${botao-login}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.573718" elapsed="0.084020"/>
+<status status="PASS" start="2026-03-09T22:25:02.082700" elapsed="0.079239"/>
 </kw>
-<status status="PASS" start="2026-03-04T23:33:28.670176" elapsed="2.987804"/>
+<status status="PASS" start="2026-03-09T22:24:59.189798" elapsed="2.972386"/>
 </kw>
-<kw name="Adicionar produto" owner="page_menu">
-<kw name="Replace String" owner="String">
-<msg time="2026-03-04T23:33:31.660355" level="INFO">${botao-produto} = id=add-to-cart-sauce-labs-backpack</msg>
-<var>${botao-produto}</var>
-<arg>${botao-adicionar-carrinho}</arg>
-<arg>{nome-produto}</arg>
-<arg>${produto}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.659962" elapsed="0.001074"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.661416" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg time="2026-03-04T23:33:31.662931" level="INFO">Verifying element 'id=add-to-cart-sauce-labs-backpack' contains exact text 'Add to cart'.</msg>
-<arg>${botao-produto}</arg>
-<arg>Add to cart</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.661490" elapsed="0.021219"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.683363" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
-<arg>${botao-produto}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.683040" elapsed="0.061271"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-04T23:33:31.744857" level="INFO">${botao-produto} = id=remove-sauce-labs-backpack</msg>
-<var>${botao-produto}</var>
-<arg>${botao-remover-carrinho}</arg>
-<arg>{nome-produto}</arg>
-<arg>${produto}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.744573" elapsed="0.000398"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.745119" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg time="2026-03-04T23:33:31.745949" level="INFO">Verifying element 'id=remove-sauce-labs-backpack' contains exact text 'Remove'.</msg>
-<arg>${botao-produto}</arg>
-<arg>Remove</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.745151" elapsed="0.013424"/>
-</kw>
-<arg>${ID_PRODUTO_NOME[0]}</arg>
-<status status="PASS" start="2026-03-04T23:33:31.658795" elapsed="0.100020"/>
-</kw>
-<kw name="Remover item do carrinho" owner="page_cart">
 <kw name="Abrir carrinho" owner="page_menu">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${botao-carrinho}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.759965" elapsed="0.013167"/>
+<status status="PASS" start="2026-03-09T22:25:02.163490" elapsed="0.016131"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.773707" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
+<msg time="2026-03-09T22:25:02.180389" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
 <arg>${botao-carrinho}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.773391" elapsed="0.042684"/>
+<status status="PASS" start="2026-03-09T22:25:02.180011" elapsed="0.046488"/>
 </kw>
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.820048" level="INFO">${url} = https://www.saucedemo.com/cart.html</msg>
+<msg time="2026-03-09T22:25:02.231481" level="INFO">${url} = https://www.saucedemo.com/cart.html</msg>
 <var>${url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.816348" elapsed="0.003879"/>
+<status status="PASS" start="2026-03-09T22:25:02.226833" elapsed="0.004835"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
-<msg time="2026-03-04T23:33:31.820824" level="INFO">${url} = None</msg>
+<msg time="2026-03-09T22:25:02.232163" level="INFO">${url} = None</msg>
 <var>${url}</var>
 <arg>${url}</arg>
 <arg>https://www.saucedemo.com/cart.html</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.820495" elapsed="0.000418"/>
+<status status="PASS" start="2026-03-09T22:25:02.231885" elapsed="0.000371"/>
 </kw>
-<status status="PASS" start="2026-03-04T23:33:31.759688" elapsed="0.061341"/>
+<status status="PASS" start="2026-03-09T22:25:02.162966" elapsed="0.069412"/>
 </kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-04T23:33:31.821811" level="INFO">${remove-button} = id=remove-sauce-labs-backpack</msg>
-<var>${remove-button}</var>
-<arg>${remove-item-cart-btn}</arg>
-<arg>{index}</arg>
-<arg>${ID_PRODUTO_NOME[${index}]}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.821173" elapsed="0.001133"/>
+<kw name="Fechar pedido" owner="page_cart">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.244505" level="INFO">Element 'id=checkout' is displayed.</msg>
+<arg>${botao-checkout}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.233343" elapsed="0.011805"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-03-04T23:33:31.822764" level="INFO">Clicking element 'id=remove-sauce-labs-backpack'.</msg>
-<arg>${remove-button}</arg>
+<msg time="2026-03-09T22:25:02.245734" level="INFO">Clicking element 'id=checkout'.</msg>
+<arg>${botao-checkout}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.822505" elapsed="0.034102"/>
+<status status="PASS" start="2026-03-09T22:25:02.245434" elapsed="0.036627"/>
 </kw>
-<arg>0</arg>
-<status status="PASS" start="2026-03-04T23:33:31.759287" elapsed="0.097539"/>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.285268" level="INFO">${location} = https://www.saucedemo.com/checkout-step-one.html</msg>
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.282335" elapsed="0.003074"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2026-03-09T22:25:02.285825" level="INFO">${location} = None</msg>
+<var>${location}</var>
+<arg>https://www.saucedemo.com/checkout-step-one.html</arg>
+<arg>https://www.saucedemo.com/checkout-step-one.html</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.285596" elapsed="0.000314"/>
+</kw>
+<status status="PASS" start="2026-03-09T22:25:02.232888" elapsed="0.053133"/>
+</kw>
+<kw name="Preencher campo first name" owner="page_checkout">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.297319" level="INFO">Element 'id=first-name' is displayed.</msg>
+<arg>${input-first-name}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.286697" elapsed="0.011177"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.298407" level="INFO">Typing text 'Pedro' into text field 'id=first-name'.</msg>
+<arg>${input-first-name}</arg>
+<arg>Pedro</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.298106" elapsed="0.068846"/>
+</kw>
+<status status="PASS" start="2026-03-09T22:25:02.286408" elapsed="0.080752"/>
+</kw>
+<kw name="Preencher campo last name" owner="page_checkout">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.378590" level="INFO">Element 'id=last-name' is displayed.</msg>
+<arg>${input-last-name}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.367966" elapsed="0.010814"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.379189" level="INFO">Typing text 'Testes' into text field 'id=last-name'.</msg>
+<arg>${input-last-name}</arg>
+<arg>Testes</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.378961" elapsed="0.064925"/>
+</kw>
+<status status="PASS" start="2026-03-09T22:25:02.367624" elapsed="0.076479"/>
+</kw>
+<kw name="Preencher campo postal code" owner="page_checkout">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.455336" level="INFO">Element 'id=postal-code' is displayed.</msg>
+<arg>${input-postal-code}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.445175" elapsed="0.010343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.455944" level="INFO">Typing text '12345000' into text field 'id=postal-code'.</msg>
+<arg>${input-postal-code}</arg>
+<arg>12345000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.455697" elapsed="0.046873"/>
+</kw>
+<status status="PASS" start="2026-03-09T22:25:02.444645" elapsed="0.058114"/>
+</kw>
+<kw name="Validar botao de continuar" owner="page_checkout">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.514632" level="INFO">Element 'id=continue' is displayed.</msg>
+<arg>${botao-continue}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.503741" elapsed="0.011105"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-09T22:25:02.515288" level="INFO">Clicking element 'id=continue'.</msg>
+<arg>${botao-continue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T22:25:02.515053" elapsed="0.044488"/>
+</kw>
+<status status="PASS" start="2026-03-09T22:25:02.503329" elapsed="0.056408"/>
 </kw>
 <kw name="Fechar navegador" owner="browser_util" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-03-04T23:33:31.857841" elapsed="2.138430"/>
+<status status="PASS" start="2026-03-09T22:25:02.560810" elapsed="2.135098"/>
 </kw>
-<status status="PASS" start="2026-03-04T23:33:31.857422" elapsed="2.139049"/>
+<status status="PASS" start="2026-03-09T22:25:02.560385" elapsed="2.135712"/>
 </kw>
-<status status="PASS" start="2026-03-04T23:33:28.669283" elapsed="5.327464"/>
+<status status="PASS" start="2026-03-09T22:24:59.189056" elapsed="5.507303"/>
 </test>
-<status status="PASS" start="2026-03-04T23:33:28.373741" elapsed="5.623850"/>
+<status status="PASS" start="2026-03-09T22:24:58.919887" elapsed="5.777251"/>
 </suite>
 <statistics>
 <total>
@@ -145,11 +174,9 @@
 <tag>
 </tag>
 <suite>
-<stat name="Test Cart" id="s1" pass="1" fail="0" skip="0">Test Cart</stat>
+<stat name="Test Checkout" id="s1" pass="1" fail="0" skip="0">Test Checkout</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-03-04T23:33:31.661416" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg time="2026-03-04T23:33:31.745119" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
 </errors>
 </robot>
