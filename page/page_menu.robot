@@ -4,12 +4,12 @@ Library    String
 Library    XML
 
 *** Keywords ***
-Checar visibilidade do produto
+Validar produto visivel
     [Arguments]    ${id}
     ${produto}=    Replace String    ${item-id}    {id}    ${id}
     Element Should Be Visible    ${produto}
     
-Adicionar produto
+Clicar botao adicionar produto ao carrinho
     [Arguments]    ${produto}
     ${botao-produto}=    Replace String    ${botao-adicionar-carrinho}    {nome-produto}    ${produto}
     Element Text Should Be    ${botao-produto}    Add to cart
@@ -17,7 +17,7 @@ Adicionar produto
     ${botao-produto}=    Replace String    ${botao-remover-carrinho}    {nome-produto}    ${produto}
     Element Text Should Be    ${botao-produto}    Remove
     
-Remover produto
+Clicar botao remover produto do carrinho
     [Arguments]    ${produto}
     ${botao-produto}=    Replace String    ${botao-remover-carrinho}    {nome-produto}    ${produto}
     Click Button    ${botao-produto}
@@ -25,13 +25,7 @@ Remover produto
     ${botao-texto}=    Get Text    ${botao-produto}
     Should Be Equal    ${botao-texto}    Add to cart
 
-Abrir carrinho
-    Wait Until Element Is Visible    ${botao-carrinho}
-    Click Element    ${botao-carrinho}
-    ${url}=    Get Location
-    ${url}    Should Be Equal   ${url}    https://www.saucedemo.com/cart.html
-
-Contar produtos no carrinho
+Validar quantos produtos foram adicionados
     ${contador}=    Set Variable    0
     FOR    ${produto-index}    IN    @{ID_PRODUTO_NOME}
         ${botao-status}=    Replace String    ${botao-remover-carrinho}    {nome-produto}    ${produto-index}
@@ -48,7 +42,7 @@ Contar produtos no carrinho
         Element Should Not Be Visible    ${contador-carrinho}
     END
 
-Validar item adicionado
+Validar os produtos adicionados
     [Arguments]    ${id}
     Element Should Be Visible    ${lista-carrinho}
     ${produto}=    Replace String    ${item-id}    {id}    ${id}

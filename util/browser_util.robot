@@ -7,11 +7,10 @@ Resource    resources.robot
 Preparar ambiente de teste
     Open Browser    https://www.saucedemo.com/    chrome
     Maximize Browser Window
-    Input Text    ${campo-usuario}    ${USERNAME}
-    Input Text    ${campo-senha}    ${PASSWORD}
-    Click Button    ${botao-login}
+    Realizar login    ${USUARIO}    ${SENHA}
 Abrir navegador
     Open Browser    https://www.saucedemo.com/    chrome
+    Wait Until Element Is Visible    ${titulo-login}
     Maximize Browser Window
 Fechar navegador
     Close Browser

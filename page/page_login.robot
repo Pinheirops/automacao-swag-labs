@@ -3,7 +3,8 @@ Resource    ../util/resources.robot
 
 *** Keywords ***    #   keywords dos testes de login
 
-Login
-    Input Text    ${campo-usuario}    ${USERNAME}
-    Input Text    ${campo-senha}    ${PASSWORD}
+Realizar login
+    [Arguments]    ${usuario}    ${senha}
+    Input Text    ${campo-usuario}    ${usuario}
+    Input Text    ${campo-senha}    ${senha}
     Click Button    ${botao-login}

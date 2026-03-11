@@ -1,3 +1,3 @@
 *** Variables ***    #   credenciais reutilizaveis de login
-${USERNAME}    standard_user
-${PASSWORD}    secret_sauce
+${USUARIO}    standard_user
+${SENHA}    secret_sauce

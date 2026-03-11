@@ -2,24 +2,15 @@
 Resource    ../util/resources.robot
 
 *** Keywords ***
-
-# Validar itens adicionados
-#     Checar visibilidade do produto    $id
-
-Continuar comprando
-    Abrir carrinho
+Clicar no botao continuar comprando
+    Element Should Be Visible    ${botao-continue-comprando}
     Click Element    ${botao-continue-comprando}
-    ${url}=    Get Location
-    ${url}    Should Be Equal   ${url}    https://www.saucedemo.com/inventory.html
 
-Remover item do carrinho
+Remover item adicionado no carrinho
     [Arguments]    ${index}
-    Abrir carrinho
     ${remove-button}=    Replace String    ${remove-item-cart-btn}    {index}    ${ID_PRODUTO_NOME[${index}]}
     Click Element    ${remove-button}
     
-Fechar pedido
+Clicar no botao de checkout
     Element Should Be Visible    ${botao-checkout}
     Click Element    ${botao-checkout}
-    ${location}=    Get Location
-    ${location}    Should Be Equal    https://www.saucedemo.com/checkout-step-one.html    https://www.saucedemo.com/checkout-step-one.html

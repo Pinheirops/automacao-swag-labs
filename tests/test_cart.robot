@@ -4,13 +4,17 @@ Test Setup    Preparar ambiente de teste
 Test Teardown   Fechar navegador
 
 *** Test Cases ***
-Validar botão de continuar comprando
-    Continuar comprando
+Validar botão de retornar aos produtos
+    Clicar no botao de abrir carrinho
+    Clicar no botao continuar comprando
+    Validar acesso na pagina de produtos
 
 Validar remoção de item do carrinho
-    Adicionar produto    ${ID_PRODUTO_NOME[0]}
-    Remover item do carrinho    0
+    Clicar no botao de abrir carrinho
+    Clicar botao adicionar produto ao carrinho    ${ID_PRODUTO_NOME[0]}
+    Clicar botao remover produto do carrinho    0
 
-Validar botão de checkout
-    Abrir carrinho
-    Fechar pedido
+Validar botão de confirmar carrinho
+    Clicar no botao de abrir carrinho
+    Clicar no botao continuar checkout
+    Validar acesso a pagina de checkout
