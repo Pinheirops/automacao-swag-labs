@@ -44,6 +44,6 @@ Validar quantos produtos foram adicionados
 
 Validar os produtos adicionados
     [Arguments]    ${id}
-    Element Should Be Visible    ${lista-carrinho}
+    Wait Until Element Is Visible   ${lista-carrinho}
     ${produto}=    Replace String    ${item-id}    {id}    ${id}
     Element Should Be Visible    ${produto}

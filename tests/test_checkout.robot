@@ -27,5 +27,5 @@ Concluir checkout
     Preencher campo first name
     Preencher campo last name
     Preencher campo postal code
-    Clicar no botao continuar checkout
+    Clicar no botao finalizar checkout
     Validar acesso ao checkout:overview

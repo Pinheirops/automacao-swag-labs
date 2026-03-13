@@ -16,5 +16,5 @@ Validar remoção de item do carrinho
 
 Validar botão de confirmar carrinho
     Clicar no botao de abrir carrinho
-    Clicar no botao continuar checkout
-    Validar acesso a pagina de checkout
+    Clicar no botao de checkout
+    Validar acesso a pagina de checkout:info

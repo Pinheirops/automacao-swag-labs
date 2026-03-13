@@ -11,8 +11,11 @@ Acessar pagina de checkout
     Clicar no botao de abrir carrinho
     Clicar no botao de checkout
 
-Validar acesso a pagina de checkout
+Validar acesso a pagina de checkout:info
     Location Should Be    https://www.saucedemo.com/checkout-step-one.html
+
+Validar acesso ao checkout:overview
+    Location Should Be    https://www.saucedemo.com/checkout-step-two.html
 
 Validar acesso ao carrinho
     Location Should Be     https://www.saucedemo.com/cart.html
