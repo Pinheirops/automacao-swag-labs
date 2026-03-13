@@ -3,7 +3,7 @@ Resource    ../util/resources.robot
 Suite Setup    Preparar ambiente de teste
 
 *** Test Cases ***
-Validar fluxo de compra completo
+Fluxo completo de compra do usuario
     Validar produto visivel    4
     Clicar botao adicionar produto ao carrinho    ${ID_PRODUTO_NOME[0]}
     Clicar no botao de abrir carrinho
