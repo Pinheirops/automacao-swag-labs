@@ -1,32 +1,43 @@
 # Automação Swag labs
+Este projeto tem como objetivo praticar automação de testes em aplicações web, utilizando o site Swag Labs (SauceDemo) como ambiente de estudo.
 
-Este projeto tem como objetivo praticar e demonstrar automação de testes em aplicações web, utilizando o site Swag Labs (SauceDemo) como ambiente de estudo.
 
 A automação cobre cenários como:
-
-- Login válido e inválido
-- Navegação pelos produtos
-- Adição e remoção de itens no carrinho
-- Finalização da compra
+- Login válido e inválido;
+- Navegação pelos produtos;
+- Adição e remoção de itens no carrinho;
+- Finalização da compra.
 
 O projeto é voltado para estudos e prática de QA/Automação de Testes, servindo como referência para quem deseja aprender sobre:
-- Estruturação de testes automatizados
-- Uso de ferramentas como Robot Framework, SeleniumLibrary e Playwright
-- Boas práticas em automação web
+- Estruturação de testes automatizados;
+- Uso do Robot Framework
+- Automação web com SeleniumLibrary
+- Boas práticas em organização de testes
 
 ## Escopo da Automação
-
-- Funcionalidades testadas: Login, produtos, carrinho, checkout
-- Ferramenta de automação: Robot Framework (com Playwright)
-- Navegador utilizado: Chrome
+- Funcionalidades testadas: Login, Produtos, Carrinho, Checkout.
+- Ferramenta de automação: Robot Framework.
+- Biblioteca utilizada: SeleniumLibrary e Collections.
+- Navegador utilizado: Chrome.
 - Ambiente: https://www.saucedemo.com/
+- Ferramenta de relatório: Allure Report.
 
-
-## Configurações de Ambiente
-
-Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente.
-
+## Estrutura do Projeto
+.
+├── DATA
+│   └── Variáveis utilizadas nos testes
+├── LOCATORS
+│   └── Elementos da página (xpaths, ids, etc)
+├── PAGE
+│   └── Keywords e regras de interação com as páginas
+├── TEST
+│   └── Casos de teste
+└── UTIL
+    └── Arquivos de integração e imports
+    
+## Configuração do Ambiente
 #### Pré Requisitos
+Verificar se o Python e o pip estão instalados:
 ```
 Python --version
 pip --version
@@ -38,15 +49,36 @@ git clone git@github.com:Pinheirops/Swag_Labs_Automation.git
 ```
 
 #### Instalar dependências
+Instalar o Robot framework:
+```
+pip install robotframework
+```
+Instalar a biblioteca Selenium:
 ```
 pip install robotframework-seleniumlibrary
 ```
 
-#### Instalar Robot Framework
+## Executar os Testes
+Para executar os testes, rode o comando abaixo:
 ```
-pip install robotframework
+robot tests/
 ```
-## Como Executar os Testes
+Ou execute um teste específico:
 ```
-robot ../{file}.robot
+robot tests/nome_do_teste.robot
+```
+
+## Relatórios de Teste
+Este projeto utiliza o **Allure Report** para geração de relatórios detalhados da execução dos testes.
+Para executar os testes, rode o comando abaixo:
+```
+robot --listener allure_robotframework:output tests/
+```
+Utilize o comando abaixo para gerar o relatório:
+```
+allure generate output -o allure-report
+```
+Para abrir o relatório, utilize o comando abaixo:
+```
+allure open allure-report
 ```
