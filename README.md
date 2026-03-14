@@ -23,17 +23,11 @@ O projeto é voltado para estudos e prática de QA/Automação de Testes, servin
 - Ferramenta de relatório: Allure Report.
 
 ## Estrutura do Projeto
-.
-├── DATA
-│   └── Variáveis utilizadas nos testes
-├── LOCATORS
-│   └── Elementos da página (xpaths, ids, etc)
-├── PAGE
-│   └── Keywords e regras de interação com as páginas
-├── TEST
-│   └── Casos de teste
-└── UTIL
-    └── Arquivos de integração e imports
+- DATA - Variáveis utilizadas nos testes
+- LOCATORS - Elementos da página (xpaths, ids, etc)
+- PAGE - Keywords e regras de interação com as páginas
+- TEST - Casos de teste
+- UTIL - Arquivos de integração e imports
     
 ## Configuração do Ambiente
 #### Pré Requisitos
