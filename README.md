@@ -64,6 +64,7 @@ robot tests/nome_do_teste.robot
 
 ## Relatórios de Teste
 Este projeto utiliza o **Allure Report** para geração de relatórios detalhados da execução dos testes.
+
 Para executar os testes, rode o comando abaixo:
 ```
 robot -d output --listener allure_robotframework:results tests/
