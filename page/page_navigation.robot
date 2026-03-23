@@ -22,3 +22,8 @@ Validar acesso ao carrinho
   
 Validar acesso na pagina de produtos
     Location Should Be    https://www.saucedemo.com/inventory.html
+
+Validar conclusao de compra
+    Location Should Be    https://www.saucedemo.com/checkout-complete.html
+    Element Should Be Visible    ${text-confirmacao}
+    Element Text Should Be    ${text-confirmacao}    Thank you for your order!

@@ -16,4 +16,5 @@ Fluxo completo de compra do usuario
     Preencher campo postal code
     Clicar no botao finalizar checkout
     Validar acesso ao checkout:overview
-    
+    Clicar no botao concluir compra
+    Validar conclusao de compra

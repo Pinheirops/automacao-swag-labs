@@ -33,3 +33,7 @@ Preencher campo postal code
 Clicar no botao finalizar checkout
     Element Should Be Visible    ${botao-continue}
     Click Element    ${botao-continue}
+
+Clicar no botao concluir compra
+    Element Should Be Visible    ${botao-concluir-compra}
+    Click Element    ${botao-concluir-compra}

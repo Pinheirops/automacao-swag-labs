@@ -6,3 +6,5 @@ ${botao-continue}    id=continue
 ${botao-cancel}    id=cancel
 ${titulo-checkout}    css:[data-test="title"]
 ${mensagem-info-required}    css:[data-test='error']
+${botao-concluir-compra}    id=finish
+${text-confirmacao}    css:[data-test="complete-header"]
