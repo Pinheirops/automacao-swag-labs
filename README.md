@@ -1,6 +1,5 @@
-# Automação Swag labs
+# Robot Framework - Automação Swag labs
 Este projeto tem como objetivo praticar automação de testes em aplicações web, utilizando o site Swag Labs (SauceDemo) como ambiente de estudo.
-
 
 A automação cobre cenários como:
 - Login válido e inválido;
